@@ -37,6 +37,11 @@ export const eventsConfig: EventItem[] = [
     date: "November 10-11, 2025",
     location: "Virtual & CVR College of Engineering",
     imageUrl: "/images/events/techvista-2025/main.jpg",
+    galleryImages: [
+      "/images/events/techvista-2025/gallery-1.jpg",
+      "/images/events/techvista-2025/gallery-2.jpg",
+      "/images/events/techvista-2025/gallery-3.jpg",
+    ],
     tags: ["symposium", "research", "tech", "innovation"],
   },
   {

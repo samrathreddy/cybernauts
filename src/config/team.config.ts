@@ -71,7 +71,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 6,
     name: "Arjun Kumar",
-    role: "Technical Head",
+    role: "Technical Lead",
     description: "Leads development team",
     imageUrl: "..//team-member.png",
     linkedInUrl: "https://www.linkedin.com/in/tech-head",
@@ -147,7 +147,7 @@ const teamLeads: TeamMember[] = [
   {
     id: 15,
     name: "Divya Agarwal",
-    role: "Design Lead",
+    role: "Graphics Lead",
     description: "Graphics & UI Design",
     imageUrl: "..//team-member.png",
     linkedInUrl: "https://www.linkedin.com/in/design-lead",
@@ -155,7 +155,7 @@ const teamLeads: TeamMember[] = [
   {
     id: 16,
     name: "Suresh Kumar",
-    role: "Event Lead",
+    role: "Event Management Lead",
     description: "Event Planning & Execution",
     imageUrl: "..//team-member.png",
     linkedInUrl: "https://www.linkedin.com/in/event-lead",
@@ -163,7 +163,7 @@ const teamLeads: TeamMember[] = [
   {
     id: 17,
     name: "Meera Nair",
-    role: "Content Lead",
+    role: "Outreach Lead",
     description: "Content Strategy & Creation",
     imageUrl: "..//team-member.png",
     linkedInUrl: "https://www.linkedin.com/in/content-lead",

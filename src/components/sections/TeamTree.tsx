@@ -18,14 +18,46 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
       return null;
     }
     
+    // Helper to check if image URL is valid and accessible
+    const isValidImageUrl = (url: string): boolean => {
+      // Check if path is relative and incorrect (starting with ../)
+      if (url.startsWith('../')) return false;
+      
+      // Check if path is empty
+      if (!url.trim()) return false;
+      
+      return true;
+    };
+    
     return (
       <Card key={member.id} className={`w-full sm:w-60 flex flex-col bg-gradient-to-b from-[rgba(21,31,45,1)] to-[rgba(1,1,1,1)] border-none shadow-md relative overflow-hidden ${member.id === 0 ? 'hidden' : ''}`}>
-        <div className="h-20 sm:h-24 bg-gradient-to-r from-amber-500/30 to-amber-700/20 rounded-t-xl flex items-center justify-center">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-black/30 flex items-center justify-center backdrop-blur-sm overflow-hidden">
-            <div className="text-center text-white text-xs sm:text-sm p-1">
-              {member.role}
+        <div className="h-32 sm:h-40 bg-gradient-to-r from-amber-500/30 to-amber-700/20 rounded-t-xl flex items-center justify-center overflow-hidden">
+          {member.imageUrl && isValidImageUrl(member.imageUrl) ? (
+            <img 
+              src={member.imageUrl} 
+              alt={`${member.name} - ${member.role}`}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                // If image fails to load, replace with default avatar
+                e.currentTarget.src = "/images/team/default-avatar.png";
+                // If no default avatar exists, show role as text fallback
+                e.currentTarget.onerror = () => {
+                  e.currentTarget.style.display = 'none';
+                  if (e.currentTarget.parentElement) {
+                    e.currentTarget.parentElement.innerHTML = `<div class="w-full h-full flex items-center justify-center bg-black/30 backdrop-blur-sm">
+                      <div class="text-center text-white text-base sm:text-lg p-2">${member.role}</div>
+                    </div>`;
+                  }
+                };
+              }}
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-black/30 backdrop-blur-sm">
+              <div className="text-center text-white text-base sm:text-lg p-2">
+                {member.role}
+              </div>
             </div>
-          </div>
+          )}
         </div>
         
         <CardContent className="flex flex-col items-center text-center p-3 sm:p-4 gap-1 sm:gap-2">
@@ -176,7 +208,7 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
     return (
       <div className="flex flex-col">
         {/* Team members section title */}
-        <div className="text-amber-400 text-center mb-6 font-medium text-lg">Team Members</div>
+        <div className="text-amber-400 text-center mb-6 font-medium text-lg">Core Team Members</div>
         
         {/* Mobile: Show one card per row */}
         <div className="flex flex-col items-center sm:hidden gap-6">
