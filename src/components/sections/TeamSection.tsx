@@ -24,7 +24,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({
             className="flex flex-col items-start gap-4 p-4 relative [background:linear-gradient(180deg,rgba(21,31,45,1)_0%,rgba(1,1,1,1)_100%)] border-none h-full overflow-hidden"
           >
             <div
-              className="h-[180px] sm:h-[200px] md:h-[220px] relative w-full bg-[#121b27] overflow-hidden"
+              className="aspect-square sm:aspect-auto sm:h-[200px] md:h-[220px] relative w-full bg-[#121b27] overflow-hidden"
             >
               {/* Display member image */}
               {member.imageUrl ? (

@@ -22,7 +22,7 @@ export const teamHierarchy: TeamMember = {
       name: "Dr.K. Ramamohan Reddy",
       role: "Principal",
       description: "College Principal",
-      imageUrl: "..//frame-29.png",
+      imageUrl: "/images/team/Ramamohan.jpeg",
       linkedInUrl: "https://www.linkedin.com/in/principal-cvr",
     },
     {
@@ -30,7 +30,7 @@ export const teamHierarchy: TeamMember = {
       name: "L.C. Siva Reddy",
       role: "Vice Principal",
       description: "College Vice Principal",
-      imageUrl: "shiva-reddy.png",
+      imageUrl: "/images/team/shiva-reddy.png",
       linkedInUrl: "https://www.linkedin.com/in/viceprincipal-cvr",
     },
     {
@@ -38,7 +38,7 @@ export const teamHierarchy: TeamMember = {
       name: "Dr.A. Vani Vathsala",
       role: "CSE HOD",
       description: "Head of Computer Science Department",
-      imageUrl: "..//frame-28-1.png",
+      imageUrl: "/images/team/vani-vathsala.png",
       linkedInUrl: "https://www.linkedin.com/in/csehod-cvr",
     },
   ],
@@ -50,7 +50,7 @@ const chairMember: TeamMember = {
   name: "Y.V. Sridhar",
   role: "Cybernauts Chair",
   description: "Cybernauts Chairperson",
-  imageUrl: "..//frame-28-2.png",
+  imageUrl: "/images/team/sridhar.png",
   linkedInUrl: "https://www.linkedin.com/in/cybernautschair",
   children: [],
 };
@@ -61,7 +61,7 @@ const vcMember: TeamMember = {
   name: "Y. Samrath Reddy",
   role: "Cybernauts VC",
   description: "Cybernauts Vice Chairperson",
-  imageUrl: "..//frame-28-3.png",
+  imageUrl: "/images/team/samrath.png",
   linkedInUrl: "https://www.linkedin.com/in/samrathreddy",
   children: [],
 };
@@ -205,24 +205,24 @@ export const teamConfig: TeamMember[] = [
     id: 1,
     name: "Dr.K. Ramamohan Reddy",
     role: "Principal",
-    description: "College Principal",
-    imageUrl: "sh.png",
+    description: "Principal",
+    imageUrl: "/images/team/Ramamohan.jpeg",
     linkedInUrl: "https://www.linkedin.com/in/principal-cvr"
   },
   {
     id: 2,
-    name: "L.C. Siva Reddy",
+    name: "Prof. L.C. Siva Reddy",
     role: "Vice Principal",
-    description: "College Vice Principal",
-    imageUrl: "shiva-reddy.png",
+    description: "Vice Principal",
+    imageUrl: "/images/team/shiva-reddy.png",
     linkedInUrl: "https://www.linkedin.com/in/viceprincipal-cvr"
   },
   {
     id: 3,
     name: "Dr.A. Vani Vathsala",
     role: "CSE HOD",
-    description: "Head of Computer Science Department",
-    imageUrl: "vani-vathsala.png",
+    description: "Head of Department - CSE",
+    imageUrl: "/images/team/vani-vathsala.png",
     linkedInUrl: "https://www.linkedin.com/in/csehod-cvr"
   },
   {
@@ -230,7 +230,7 @@ export const teamConfig: TeamMember[] = [
     name: "Y.V. Sridhar",
     role: "Cybernauts Chair",
     description: "Cybernauts Chairperson",
-    imageUrl: "..//frame-28-2.png",
+    imageUrl: "/images/team/sridhar.png",
     linkedInUrl: "https://www.linkedin.com/in/cybernautschair"
   },
   {
@@ -238,7 +238,7 @@ export const teamConfig: TeamMember[] = [
     name: "Y. Samrath Reddy",
     role: "Cybernauts VC",
     description: "Cybernauts Vice Chairperson",
-    imageUrl: "samrath.png",
+    imageUrl: "/images/team/samrath.png",
     linkedInUrl: "https://www.linkedin.com/in/samrath-reddy"
   },
 ]; 

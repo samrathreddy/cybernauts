@@ -1,8 +1,9 @@
 import React from "react";
 import { Header } from "../../components/layout/Header";
 import { HeroSection } from "../../components/sections/HeroSection";
-import { SponsorsSection } from "../../components/sections/SponsorsSection";
+// import { SponsorsSection } from "../../components/sections/SponsorsSection";
 import { TeamSection } from "../../components/sections/TeamSection";
+import { ShowcaseSection } from "../../components/sections/3DShowcaseSection";
 import { Footer } from "../../components/layout/Footer";
 
 // Import configurations
@@ -21,11 +22,11 @@ export const Home = (): JSX.Element => {
           siteConfig={siteConfig}
         />
 
-        {/* Hero Section Component */}
-        <HeroSection siteConfig={siteConfig} />
+        {/* Hero Section Component with Sponsors */}
+        <HeroSection siteConfig={siteConfig} sponsors={sponsorsConfig} />
 
-        {/* Sponsors Section Component */}
-        <SponsorsSection sponsors={sponsorsConfig} />
+        {/* Sponsors Section moved into HeroSection */}
+        {/* <SponsorsSection sponsors={sponsorsConfig} /> */}
 
         {/* Team Section Component */}
         <TeamSection team={teamConfig} title="Lead By" />

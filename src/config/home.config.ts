@@ -20,6 +20,6 @@ export const siteConfig: SiteConfig = {
   eventDescription: "Join Cypher ultimate fest of CVR, fun is guaranteed. (Yes, you've read that right.)",
   ctaText: "Enroll now",
   footerText: "© 2025 Cybernauts CVR. All rights reserved.",
-  logoSrc: "/cybernauts-logo.png",
+  logoSrc: "/images/logos/cybernauts-logo.png",
   logoAlt: "Cybernauts logo",
 }; 

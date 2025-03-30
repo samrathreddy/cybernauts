@@ -10,7 +10,7 @@ export interface Sponsor {
 export const sponsorsConfig: Sponsor[] = [
   {
     name: "Sponsored by",
-    image: "/sponsored-by.png",
+    image: "/images/sponsors/sponsored-by.png",
     width: "78.43px", 
     height: "11.3px",
     mobileWidth: "60px",
@@ -18,7 +18,7 @@ export const sponsorsConfig: Sponsor[] = [
   },
   { 
     name: "Algorana", 
-    image: "/algorana.png", 
+    image: "/images/sponsors/algorana.png", 
     width: "48px", 
     height: "13px",
     mobileWidth: "40px",
@@ -26,7 +26,7 @@ export const sponsorsConfig: Sponsor[] = [
   },
   {
     name: "Cloudfare",
-    image: "/cloudfare.png",
+    image: "/images/sponsors/cloudfare.png",
     width: "43px",
     height: "15px",
     mobileWidth: "35px",
@@ -34,7 +34,7 @@ export const sponsorsConfig: Sponsor[] = [
   },
   { 
     name: "Loops", 
-    image: "/loops.png", 
+    image: "/images/sponsors/loops.png", 
     width: "53px", 
     height: "12px",
     mobileWidth: "45px",
@@ -42,7 +42,7 @@ export const sponsorsConfig: Sponsor[] = [
   },
   { 
     name: "Netlify", 
-    image: "/netlify.png", 
+    image: "/images/sponsors/netlify.png", 
     width: "46px", 
     height: "14px",
     mobileWidth: "38px",
@@ -50,7 +50,7 @@ export const sponsorsConfig: Sponsor[] = [
   },
   { 
     name: "Sentry", 
-    image: "/sentry.png", 
+    image: "/images/sponsors/sentry.png", 
     width: "47px", 
     height: "17px",
     mobileWidth: "39px",
@@ -58,7 +58,7 @@ export const sponsorsConfig: Sponsor[] = [
   },
   { 
     name: "Supabase", 
-    image: "/supabase.png", 
+    image: "/images/sponsors/supabase.png", 
     width: "57px", 
     height: "11px",
     mobileWidth: "45px",

@@ -11,4 +11,9 @@ export default defineConfig({
       plugins: [tailwind()],
     },
   },
+  resolve: {
+    alias: {
+      "@": "/src",
+    },
+  },
 });
