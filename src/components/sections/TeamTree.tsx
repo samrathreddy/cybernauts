@@ -38,8 +38,6 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
               alt={`${member.name} - ${member.role}`}
               className="w-full h-full object-contain"
               onError={(e) => {
-                // If image fails to load, replace with default avatar
-                e.currentTarget.src = "/images/team/default-avatar.png";
                 // If no default avatar exists, show role as text fallback
                 e.currentTarget.onerror = () => {
                   e.currentTarget.style.display = 'none';

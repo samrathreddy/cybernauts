@@ -26,16 +26,32 @@ export const TeamSection: React.FC<TeamSectionProps> = ({
             <div
               className="aspect-square sm:aspect-auto sm:h-[200px] md:h-[220px] relative w-full bg-[#121b27] overflow-hidden"
             >
-              {/* Display member image */}
+              {/* Display member image with fallback to role instead of name */}
               {member.imageUrl ? (
-                <img 
-                  src={member.imageUrl} 
-                  alt={`${member.name}`} 
-                  className="w-full h-full object-cover object-top"
-                />
+                <div className="w-full h-full">
+                  <img 
+                    src={member.imageUrl} 
+                    alt={`${member.name}`} 
+                    className="w-full h-full object-cover object-top"
+                    onError={(e) => {
+                      // Prevent infinite error calls
+                      e.currentTarget.onerror = null;
+                      // Hide the broken image
+                      e.currentTarget.style.display = 'none';
+                      // Find the parent div and add a fallback
+                      const parent = e.currentTarget.parentNode;
+                      if (parent) {
+                        const fallback = document.createElement('div');
+                        fallback.className = 'w-full h-full flex items-center justify-center text-white/70 text-base font-medium';
+                        fallback.textContent = member.role;
+                        parent.appendChild(fallback);
+                      }
+                    }}
+                  />
+                </div>
               ) : (
-                <div className="w-full h-full flex items-center justify-center text-white/40 text-sm">
-                  {member.name} Photo
+                <div className="w-full h-full flex items-center justify-center text-white/70 text-base font-medium">
+                  {member.role}
                 </div>
               )}
             </div>
