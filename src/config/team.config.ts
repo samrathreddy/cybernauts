@@ -73,7 +73,7 @@ const teamMembers: TeamMember[] = [
     name: "Koundinya Sarikonda",
     role: "Secretary",
     description: "Handles administrative duties",
-    imageUrl: "..//team-member.png",
+    imageUrl: "/images/team/koundinya.jpg",
     linkedInUrl: "https://www.linkedin.com/in/koundinya-sarikonda",
   },
   {
@@ -81,7 +81,7 @@ const teamMembers: TeamMember[] = [
     name: "Shravya Adarapu",
     role: "Vice-Secretary",
     description: "Assists secretary in administration",
-    imageUrl: "..//team-member.png",
+    imageUrl: "/images/team/Shravya Adarapu.jpg",
     linkedInUrl: "https://www.linkedin.com/in/shravya-adarapu-a09651276",
   },
   {
@@ -89,7 +89,7 @@ const teamMembers: TeamMember[] = [
     name: "MVSP Praneeth",
     role: "Finance Lead",
     description: "Manages financial operations",
-    imageUrl: "..//team-member.png",
+    imageUrl: "/images/team/Praneeth MVSP.jpg",
     linkedInUrl: "https://www.linkedin.com/in/praneeth-mvsp-42042b197",
   },
   {
@@ -97,7 +97,7 @@ const teamMembers: TeamMember[] = [
     name: "Kunchakuri Jasmitha",
     role: "Finance Co-Lead",
     description: "Assists in financial management",
-    imageUrl: "..//team-member.png",
+    imageUrl: "images/team/Jasmitha Kunchakuri.jpg",
     linkedInUrl: "https://www.linkedin.com/in/jasmitha-kunchakuri",
   },
   {
@@ -105,7 +105,7 @@ const teamMembers: TeamMember[] = [
     name: "M. Srija Bharadwaj",
     role: "Documentation Lead",
     description: "Manages documentation process",
-    imageUrl: "..//team-member.png",
+    imageUrl: "images/team/Srija Bharadwaj2004.jpeg",
     linkedInUrl: "https://www.linkedin.com/in/srija-bharadwaj-725036294",
   },
   {
@@ -113,7 +113,7 @@ const teamMembers: TeamMember[] = [
     name: "Prodduturi Sahithya",
     role: "Documentation Co-Lead",
     description: "Assists in documentation",
-    imageUrl: "..//team-member.png",
+    imageUrl: "images/team/Sahithya Prodduturi.jpg",
     linkedInUrl: "https://www.linkedin.com/in/sahithya-prodduturi-319274301",
   },
   {
@@ -121,7 +121,7 @@ const teamMembers: TeamMember[] = [
     name: "Rajeevi Madhireddy",
     role: "Documentation Co-Lead",
     description: "Assists in documentation",
-    imageUrl: "..//team-member.png",
+    imageUrl: "images/team/Rajeevi Madhireddy.jpg",
     linkedInUrl: "https://www.linkedin.com/in/rajeevi-madhireddy",
   },
   {
@@ -129,7 +129,7 @@ const teamMembers: TeamMember[] = [
     name: "Erugurala Hanok",
     role: "Algo Designer",
     description: "Designs algorithms and systems",
-    imageUrl: "..//team-member.png",
+    imageUrl: "images/team/Hanok Erugurala.png",
     linkedInUrl: "https://www.linkedin.com/in/hanok-erugurala",
   },
   {
@@ -137,7 +137,7 @@ const teamMembers: TeamMember[] = [
     name: "Ram Aravind",
     role: "Digital Content Curator",
     description: "Manages digital content",
-    imageUrl: "..//team-member.png",
+    imageUrl: "images/team/Passport size photo - Aravind Ram.jpeg",
     linkedInUrl: "https://www.linkedin.com/company/cybernauts-cvr/",
   },
   {
@@ -145,7 +145,7 @@ const teamMembers: TeamMember[] = [
     name: "M Aasritha",
     role: "Event Management Team Aid",
     description: "Supports event management team",
-    imageUrl: "..//team-member.png",
+    imageUrl: "/images/team/aashritha.JPG",
     linkedInUrl: "https://www.linkedin.com/in/aashritha-krishna-811041278",
   },
 ];
@@ -154,18 +154,18 @@ const teamMembers: TeamMember[] = [
 const teamLeads: TeamMember[] = [
   {
     id: 14,
-    name: "Krishna Koushik Reddy M",
+    name: "Krishna Koushik Reddy",
     role: "Technical S&D Team Lead",
     description: "Software & Development Team Lead",
-    imageUrl: "..//team-member.png",
+    imageUrl: "images/team/IMG-20240807-WA0013 - Koushik Reddy.jpg",
     linkedInUrl: "https://www.linkedin.com/in/koushik-reddy-ab7b5a251",
     children: [
       {
         id: 18,
-        name: "Kruthin",
+        name: "Kruthin Reddy",
         role: "Technical S&D Team Co-Lead",
         description: "Software & Development Co-Lead",
-        imageUrl: "..//team-member.png",
+        imageUrl: "images/team/Kruthin Reddy.jpg",
         linkedInUrl: "https://www.linkedin.com/in/kruthin-reddy",
       },
       {
@@ -173,7 +173,7 @@ const teamLeads: TeamMember[] = [
         name: "Thota Gayathri",
         role: "Technical S&D Team Member",
         description: "Software & Development Team",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/Gayathri Thota.jpg",
         linkedInUrl: "https://www.linkedin.com/in/gayathri-thota-552920300",
       },
       {
@@ -181,7 +181,7 @@ const teamLeads: TeamMember[] = [
         name: "Busetty Namruth",
         role: "Technical S&D Team Member",
         description: "Software & Development Team",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/Busetty Namruth.jpg",
         linkedInUrl: "https://www.linkedin.com/in/busetty-namruth-054859300",
       },
       {
@@ -189,7 +189,7 @@ const teamLeads: TeamMember[] = [
         name: "Parimi Sai Charan",
         role: "Technical S&D Team Member",
         description: "Software & Development Team",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/Sai Charan Parimi.jpg",
         linkedInUrl: "https://www.linkedin.com/in/sai-charan-parimi-845298286",
       },
       {
@@ -197,7 +197,7 @@ const teamLeads: TeamMember[] = [
         name: "Sreeshanth Soma",
         role: "Technical S&D Team Member",
         description: "Software & Development Team",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/sreeshanth.jpg",
         linkedInUrl: "https://www.linkedin.com/in/sreeshanth-soma-9b5bb12b3",
       }
     ]
@@ -207,7 +207,7 @@ const teamLeads: TeamMember[] = [
     name: "Mohana Harshita",
     role: "Graphics Lead",
     description: "Graphics & UI Design",
-    imageUrl: "..//team-member.png",
+    imageUrl: "public/images/team/Mohana Harshita.jpeg",
     linkedInUrl: "https://www.linkedin.com/in/mohana-harshita",
     children: [
       {
@@ -215,7 +215,7 @@ const teamLeads: TeamMember[] = [
         name: "Kowluru Sai",
         role: "Graphics Co-Lead",
         description: "Graphics & UI Design",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/Sai Kowluru.jpg",
         linkedInUrl: "https://www.linkedin.com/in/kowluru-sai",
       },
       {
@@ -223,7 +223,7 @@ const teamLeads: TeamMember[] = [
         name: "Mani Yadla",
         role: "Graphics Team Member",
         description: "Graphics & Design",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/Mani Yadla.jpg",
         linkedInUrl: "https://www.linkedin.com/in/yadla-mani",
       },
       {
@@ -231,7 +231,7 @@ const teamLeads: TeamMember[] = [
         name: "Arasada Lakshmi Meghana",
         role: "Graphics Team Member",
         description: "Graphics & Design",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/Lakshmi Meghana arasada.jpg",
         linkedInUrl: "https://www.linkedin.com/in/lakshmi-meghana-arasada-140798290",
       },
       {
@@ -239,7 +239,7 @@ const teamLeads: TeamMember[] = [
         name: "Deekshasri Bachu",
         role: "Graphics Team Member",
         description: "Graphics & Design",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/Deeksha Bachu.png",
         linkedInUrl: "https://www.linkedin.com/in/deeksha-bachu-466868290",
       },
       {
@@ -247,7 +247,7 @@ const teamLeads: TeamMember[] = [
         name: "T. Yashaswini",
         role: "Graphics Team Member",
         description: "Graphics & Design",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/tipirishetti yashaswini.jpg",
         linkedInUrl: "https://www.linkedin.com/in/tipirishetti-yashaswini-b4986b280",
       }
     ]
@@ -281,7 +281,7 @@ const teamLeads: TeamMember[] = [
         name: "Shreya Anna Mathew",
         role: "Event Management Team Member",
         description: "Event Operations",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/Shreya Anna Mathew.jpeg",
         linkedInUrl: "https://www.linkedin.com/in/shreya-anna-mathew",
       },
       {
@@ -289,7 +289,7 @@ const teamLeads: TeamMember[] = [
         name: "Bitla Nihan Reddy",
         role: "Event Management Team Member",
         description: "Event Operations",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/bitla nihan reddy.jpg",
         linkedInUrl: "https://www.linkedin.com/company/cybernauts-cvr/",
       },
       {
@@ -297,7 +297,7 @@ const teamLeads: TeamMember[] = [
         name: "Sushruta",
         role: "Event Management Team Member",
         description: "Event Operations",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/SUSHRUTA.jpg",
         linkedInUrl: "https://www.linkedin.com/in/sushrutarapolu",
       }
     ]
@@ -315,7 +315,7 @@ const teamLeads: TeamMember[] = [
         name: "Mokshagna Malineni",
         role: "Outreach Team Co-Lead",
         description: "Content Strategy & Communication",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/mokshagna malineni.jpg",
         linkedInUrl: "https://www.linkedin.com/in/mokshagnamalineni",
       },
       {
@@ -323,7 +323,7 @@ const teamLeads: TeamMember[] = [
         name: "Shaik Sana",
         role: "Outreach Team Member",
         description: "Content & Communication",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/Shaik Sana.jpg",
         linkedInUrl: "https://www.linkedin.com/in/shaik-sana-205467256",
       },
       {
@@ -331,7 +331,7 @@ const teamLeads: TeamMember[] = [
         name: "M. Aadarsh Goud",
         role: "Outreach Team Member",
         description: "Content & Communication",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/M.Aadarsh goud.jpg",
         linkedInUrl: "https://www.linkedin.com/in/m-aadarsh-goud-a52a89246",
       },
       {
@@ -339,7 +339,7 @@ const teamLeads: TeamMember[] = [
         name: "Raksha Vishwanath",
         role: "Outreach Team Member",
         description: "Content & Communication",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/V_ Raksha.jpg",
         linkedInUrl: "https://www.linkedin.com/in/raksha-vishwanath-29bab92a8",
       },
       {
@@ -347,7 +347,7 @@ const teamLeads: TeamMember[] = [
         name: "Sreeja Sadhu",
         role: "Outreach Team Member",
         description: "Content & Communication",
-        imageUrl: "..//team-member.png",
+        imageUrl: "public/images/team/Sreeja Sadhu.jpg",
         linkedInUrl: "https://www.linkedin.com/in/sreejasadhu",
       }
     ]

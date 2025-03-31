@@ -14,7 +14,7 @@ export const executiveTeamHierarchy: TeamMember = {
       name: "Dhruv Shaganti",
       role: "Executive Lead - Boys",
       description: "Executive Team Leader",
-      imageUrl: "..//team-member.png",
+      imageUrl: "public/images/team/Dhruv Shaganti.jpg",
       linkedInUrl: "http://www.linkedin.com/in/dhruv-shaganti-125788290",
       children: [
         // First Row Group
@@ -30,7 +30,7 @@ export const executiveTeamHierarchy: TeamMember = {
               name: "Sowmith Bachu",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Sowmith Bachu.JPG",
               linkedInUrl: "https://www.linkedin.com/in/sowmith-bachu-1160492b3",
             },
             {
@@ -38,7 +38,7 @@ export const executiveTeamHierarchy: TeamMember = {
               name: "M.Vignay Reddy",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Vignayreddy Muduganti.jpg",
               linkedInUrl: "https://www.linkedin.com/in/vignayreddy-muduganti",
             },
             {
@@ -46,7 +46,7 @@ export const executiveTeamHierarchy: TeamMember = {
               name: "Nama Venkata Bhargav",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Bhargav Nama.jpg",
               linkedInUrl: "https://www.linkedin.com/in/bhargav-nama-243273322",
             },
             {
@@ -54,7 +54,7 @@ export const executiveTeamHierarchy: TeamMember = {
               name: "Ajay Kumar",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Ajay.M.jpg",
               linkedInUrl: "https://www.linkedin.com/in/ajay-kumar-medaboina-1a0b18354",
             },
             {
@@ -62,7 +62,7 @@ export const executiveTeamHierarchy: TeamMember = {
               name: "G.Rajesh",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/ Raju Gajula.jpg",
               linkedInUrl: "https://www.linkedin.com/company/cybernauts-cvr/",
             }
           ]
@@ -80,7 +80,7 @@ export const executiveTeamHierarchy: TeamMember = {
               name: "Gardas Akash",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Akash Gardas.jpg",
               linkedInUrl: "https://www.linkedin.com/in/gardas-akash-66102327b",
             },
             {
@@ -88,7 +88,7 @@ export const executiveTeamHierarchy: TeamMember = {
               name: "Peddoju Yashwanth",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Yashwanth.jpeg",
               linkedInUrl: "https://www.linkedin.com/in/peddoju-yashwanth-b81220308",
             },
             {
@@ -96,7 +96,7 @@ export const executiveTeamHierarchy: TeamMember = {
               name: "Abhiram Posham",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Abhiram Posham.jpg",
               linkedInUrl: "https://www.linkedin.com/in/abhiram-posham-9701402b9",
             },
             {
@@ -104,7 +104,7 @@ export const executiveTeamHierarchy: TeamMember = {
               name: "Vrushank",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/vrushank chettipally.jpg",
               linkedInUrl: "https://www.linkedin.com/in/vrushank-chettipally-802780266",
             },
             {
@@ -112,7 +112,7 @@ export const executiveTeamHierarchy: TeamMember = {
               name: "S Dhanurdhar Yadav",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Dhanurdhar Yadav.jpg",
               linkedInUrl: "https://www.linkedin.com/in/dhanurdhar-yadav",
             },
             {
@@ -120,7 +120,7 @@ export const executiveTeamHierarchy: TeamMember = {
               name: "Likki Prateek Reddy",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Prateek Reddy.jpeg",
               linkedInUrl: "https://www.linkedin.com/company/cybernauts-cvr/",
             }
           ]
