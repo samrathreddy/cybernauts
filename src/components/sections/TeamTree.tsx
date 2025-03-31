@@ -198,12 +198,10 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
     
     const teamMembers = teamMembersGroup.children;
     
-    // For mobile: render all in a single column
-    // For desktop: Split team members into pairs (2 cards per row)
-    const teamMemberPairs = [];
-    for (let i = 0; i < teamMembers.length; i += 4) {
-      teamMemberPairs.push(teamMembers.slice(i, i + 4));
-    }
+    // Split team members into 2 rows of 5 columns each
+    // If there are more than 10 members, only the first 10 will be displayed
+    const firstRow = teamMembers.slice(0, 5);
+    const secondRow = teamMembers.slice(5, 10);
     
     return (
       <div className="flex flex-col">
@@ -226,29 +224,25 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
           ))}
         </div>
         
-        {/* Desktop: Team members cards - 2 on left, 2 on right with gap */}
+        {/* Desktop: Team members cards - 5 per row, 2 rows */}
         <div className="hidden sm:block">
-          {teamMemberPairs.map((row, rowIndex) => (
-            <div key={`row-${rowIndex}`} className="flex mb-8 justify-center">
-              {/* Left pair */}
-              <div className="flex gap-6 mr-20">
-                {row.slice(0, 2).map(member => (
-                  <div key={member.id} className="flex flex-col items-center">
-                    {renderTeamMemberCard(member)}
-                  </div>
-                ))}
+          {/* First row of 5 */}
+          <div className="flex mb-8 justify-center gap-4">
+            {firstRow.map(member => (
+              <div key={member.id} className="flex flex-col items-center">
+                {renderTeamMemberCard(member)}
               </div>
-              
-              {/* Right pair */}
-              <div className="flex gap-6 ml-20">
-                {row.slice(2, 4).map(member => (
-                  <div key={member.id} className="flex flex-col items-center">
-                    {renderTeamMemberCard(member)}
-                  </div>
-                ))}
+            ))}
+          </div>
+          
+          {/* Second row of 5 */}
+          <div className="flex mb-8 justify-center gap-4">
+            {secondRow.map(member => (
+              <div key={member.id} className="flex flex-col items-center">
+                {renderTeamMemberCard(member)}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         
         {/* Enhanced connector to Leads section with glow */}
@@ -320,6 +314,25 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
               <div className="absolute w-6 h-6 bg-amber-400/40 -top-[28px] left-1/2 transform -translate-x-1/2 rounded-full filter blur-sm"></div>
               
               {renderTeamMemberCard(lead)}
+              
+              {/* Co-Lead section (if exists) */}
+              {lead.children && lead.children.length > 0 && (
+                <div className="flex flex-col items-center gap-6">
+                  {lead.children.map((coLead, coLeadIdx) => (
+                    <div key={coLead.id} className={`mt-6 relative ${coLeadIdx > 0 ? "mt-6" : ""}`}>
+                      {/* Vertical connector from lead to co-lead or from previous co-lead */}
+                      <div className="absolute w-2 h-[25px] bg-amber-500 -top-[25px] left-1/2 transform -translate-x-1/2 rounded-full"></div>
+                      <div className="absolute w-4 h-[25px] bg-amber-400/40 -top-[25px] left-1/2 transform -translate-x-1/2 rounded-full filter blur-sm"></div>
+                      
+                      {/* Connection dot */}
+                      <div className="absolute w-4 h-4 bg-amber-500 -top-[27px] left-1/2 transform -translate-x-1/2 rounded-full"></div>
+                      <div className="absolute w-6 h-6 bg-amber-400/40 -top-[28px] left-1/2 transform -translate-x-1/2 rounded-full filter blur-sm"></div>
+                      
+                      {renderTeamMemberCard(coLead)}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -339,6 +352,25 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
                 <div className="absolute w-6 h-6 bg-amber-400/40 -top-[28px] rounded-full filter blur-sm"></div>
                 
                 {renderTeamMemberCard(lead)}
+                
+                {/* Co-Lead section (if exists) */}
+                {lead.children && lead.children.length > 0 && (
+                  <div className="flex flex-col items-center">
+                    {lead.children.map((coLead, coLeadIdx) => (
+                      <div key={coLead.id} className={`mt-6 relative ${coLeadIdx > 0 ? "mt-6" : ""}`}>
+                        {/* Vertical connector from lead to co-lead or from previous co-lead */}
+                        <div className="absolute w-2 h-[25px] bg-amber-500 -top-[25px] left-1/2 transform -translate-x-1/2 rounded-full"></div>
+                        <div className="absolute w-4 h-[25px] bg-amber-400/40 -top-[25px] left-1/2 transform -translate-x-1/2 rounded-full filter blur-sm"></div>
+                        
+                        {/* Connection dot */}
+                        <div className="absolute w-4 h-4 bg-amber-500 -top-[27px] left-1/2 transform -translate-x-1/2 rounded-full"></div>
+                        <div className="absolute w-6 h-6 bg-amber-400/40 -top-[28px] left-1/2 transform -translate-x-1/2 rounded-full filter blur-sm"></div>
+                        
+                        {renderTeamMemberCard(coLead)}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -356,6 +388,25 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
                 <div className="absolute w-6 h-6 bg-amber-400/40 -top-[28px] rounded-full filter blur-sm"></div>
                 
                 {renderTeamMemberCard(lead)}
+                
+                {/* Co-Lead section (if exists) */}
+                {lead.children && lead.children.length > 0 && (
+                  <div className="flex flex-col items-center">
+                    {lead.children.map((coLead, coLeadIdx) => (
+                      <div key={coLead.id} className={`mt-6 relative ${coLeadIdx > 0 ? "mt-6" : ""}`}>
+                        {/* Vertical connector from lead to co-lead or from previous co-lead */}
+                        <div className="absolute w-2 h-[25px] bg-amber-500 -top-[25px] left-1/2 transform -translate-x-1/2 rounded-full"></div>
+                        <div className="absolute w-4 h-[25px] bg-amber-400/40 -top-[25px] left-1/2 transform -translate-x-1/2 rounded-full filter blur-sm"></div>
+                        
+                        {/* Connection dot */}
+                        <div className="absolute w-4 h-4 bg-amber-500 -top-[27px] left-1/2 transform -translate-x-1/2 rounded-full"></div>
+                        <div className="absolute w-6 h-6 bg-amber-400/40 -top-[28px] left-1/2 transform -translate-x-1/2 rounded-full filter blur-sm"></div>
+                        
+                        {renderTeamMemberCard(coLead)}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
