@@ -1,11 +1,14 @@
 import React from "react";
 import { Header } from "../../components/layout/Header";
 import { TeamTree } from "../../components/sections/TeamTree";
+import { ExecutiveTree } from "../../components/sections/ExecutiveTree";
 import { Footer } from "../../components/layout/Footer";
 
 // Import configurations
 import { navigationConfig } from "../../config/navigation.config";
 import { teamHierarchy } from "../../config/team.config";
+import { executiveTeamHierarchy } from "../../config/executive.config";
+import { executiveGirlsTeamHierarchy } from "../../config/executiveGirls.config";
 import { siteConfig } from "../../config/home.config";
 
 export const TeamPage = (): JSX.Element => {
@@ -35,6 +38,36 @@ export const TeamPage = (): JSX.Element => {
           teamData={teamHierarchy} 
           title="Organization Structure" 
         />
+        
+        {/* Executive Teams Container */}
+        <div className="mt-20">
+          {/* Executive Teams Title */}
+          <div className="max-w-4xl mx-auto text-center mb-8">
+            <h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-semibold">
+              Executive Teams
+            </h2>
+            <div className="mt-4 w-40 h-1 bg-amber-500 mx-auto rounded-full"></div>
+          </div>
+          
+          {/* Executive Teams Grid Container - Updated to ensure alignment */}
+          <div className="grid grid-cols-1 gap-6 max-w-[1400px] mx-auto">
+            {/* Executive Team Boys Component */}
+            <div>
+              <ExecutiveTree 
+                teamData={executiveTeamHierarchy}
+                title="Boys Team" 
+              />
+            </div>
+
+            {/* Executive Team Girls Component */}
+            <div>
+              <ExecutiveTree 
+                teamData={executiveGirlsTeamHierarchy}
+                title="Girls Team" 
+              />
+            </div>
+          </div>
+        </div>
 
         {/* Footer Component */}
         <Footer siteConfig={siteConfig} />
