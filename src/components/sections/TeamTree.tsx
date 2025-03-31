@@ -204,7 +204,7 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
     const secondRow = teamMembers.slice(5, 10);
     
     return (
-      <div className="flex flex-col w-fit">
+      <div className="flex flex-col w-full">
         {/* Team members section title */}
         <div className="text-amber-400 text-center mb-6 font-medium text-lg">Core Team Members</div>
         
@@ -225,7 +225,7 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
         </div>
         
         {/* Desktop: Team members cards - 5 per row, 2 rows */}
-        <div className="hidden sm:block">
+        <div className="hidden sm:block w-full">
           {/* First row of 5 */}
           <div className="flex mb-8 justify-center gap-4">
             {firstRow.map(member => (

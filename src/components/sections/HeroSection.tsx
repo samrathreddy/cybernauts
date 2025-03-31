@@ -6,6 +6,7 @@ import { SplineSceneCanvas } from "../ui/spline-scene-canvas";
 import { Sponsor } from "../../config/sponsors.config";
 import { renderCanvas } from "../ui/canvas";
 import { Columns } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface HeroSectionProps {
   siteConfig: SiteConfig;
@@ -141,14 +142,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ siteConfig, sponsors =
             </div>
           </div>
 
-          <Button className="inline-flex items-center justify-center gap-2.5 px-6 py-3 sm:py-2.5 relative flex-[0_0_auto] bg-white rounded-[70px] hover:bg-white/90 mt-1 w-full sm:w-auto max-w-[220px]">
-            <span className="relative w-fit [font-family:'Inter',Helvetica] font-semibold text-[#010101] text-sm text-center tracking-[0] leading-[19.6px] whitespace-nowrap">
-              {siteConfig.ctaText}
-            </span>
+          <Button className="inline-flex items-center justify-center gap-2.5 px-6 py-3 sm:py-2.5 relative flex-[0_0_auto] bg-white rounded-[70px] hover:bg-white/90 mt-1 w-full sm:w-auto max-w-[220px]" asChild>
+            <Link to="/cypher">
+              <span className="relative w-fit [font-family:'Inter',Helvetica] font-semibold text-[#010101] text-sm text-center tracking-[0] leading-[19.6px] whitespace-nowrap">
+                {siteConfig.ctaText}
+              </span>
+            </Link>
           </Button>
           
           {/* Sponsors placed right after the button */}
-          {sponsors && sponsors.length > 0 && (
+          {/* {sponsors && sponsors.length > 0 && (
             <div className="w-full mt-6">
               <div className="flex items-center space-x-6 md:space-x-10 overflow-x-auto pb-2 scrollbar-hide opacity-50">
                 {sponsors.map((sponsor, index) => (
@@ -168,7 +171,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ siteConfig, sponsors =
                 ))}
               </div>
             </div>
-          )}
+          )} */}
         </div>
 
         {/* SplineSceneCanvas with cursor effect - Positioned higher up beside the content */}

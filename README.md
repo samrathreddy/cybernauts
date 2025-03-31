@@ -141,8 +141,8 @@ Events are configured in `src/config/events.config.ts`. Each event follows this 
     "/images/events/cypher-2025/gallery-2.jpg",
     "/images/events/cypher-2025/gallery-3.jpg",
   ],
-  tags: ["hackathon", "coding", "AI", "featured"],
-  featured: true,
+  tags: ["hackathon", "coding", "AI", "upcoming"],
+  upcoming: true,
 }
 ```
 

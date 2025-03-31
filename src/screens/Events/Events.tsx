@@ -157,10 +157,10 @@ export const Events = (): JSX.Element => {
               whileHover={{ y: -5 }}
               onClick={() => setSelectedEvent(event)}
             >
-              {/* Featured tag */}
-              {event.featured && (
+              {/* upcoming tag */}
+              {event.upcoming && (
                 <div className="absolute top-4 right-4 px-3 py-1 bg-amber-500 text-black text-xs font-bold rounded-md z-10">
-                  Featured
+                  upcoming
                 </div>
               )}
               
@@ -196,7 +196,7 @@ export const Events = (): JSX.Element => {
                 
                 {/* Tags - show only up to 3 tags */}
                 <div className="flex flex-wrap gap-2 mt-3">
-                  {event.tags.filter(tag => tag !== "featured").slice(0, 3).map(tag => (
+                  {event.tags.filter(tag => tag !== "upcoming").slice(0, 3).map(tag => (
                     <span 
                       key={tag} 
                       className="px-2 py-1 bg-amber-900/30 text-amber-300 text-xs rounded-md capitalize"

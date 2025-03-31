@@ -5,9 +5,10 @@ import { SiteConfig } from "../../config/home.config";
 interface HeaderProps {
   navigation: NavigationItem[];
   siteConfig: SiteConfig;
+  logoLinkUrl?: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({ navigation, siteConfig }) => {
+export const Header: React.FC<HeaderProps> = ({ navigation, siteConfig, logoLinkUrl = "/" }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -15,13 +16,13 @@ export const Header: React.FC<HeaderProps> = ({ navigation, siteConfig }) => {
       {/* Header with Logo and Navigation */}
       <header className="fixed w-full top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 py-4 md:py-6 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent backdrop-blur-sm">
         {/* Logo */}
-        <div className="flex items-center">
+        <a href={logoLinkUrl} className="flex items-center">
           <img
             className="w-[59px] h-[25px] object-cover"
             alt={siteConfig.logoAlt}
             src={siteConfig.logoSrc}
           />
-        </div>
+        </a>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">

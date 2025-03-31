@@ -31,7 +31,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({
                 <img 
                   src={member.imageUrl} 
                   alt={`${member.name}`} 
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-top"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-white/40 text-sm">
@@ -50,7 +50,9 @@ export const TeamSection: React.FC<TeamSectionProps> = ({
               </p>
 
               <a
-                href="#"
+                href={member.linkedInUrl || "#"}
+                target={member.linkedInUrl ? "_blank" : "_self"}
+                rel={member.linkedInUrl ? "noopener noreferrer" : ""}
                 className="mt-auto pt-3 text-white hover:text-blue-400 transition-colors text-sm inline-flex items-center gap-1 touch-manipulation"
               >
                 Connect <span className="text-xs">→</span>

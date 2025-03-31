@@ -23,7 +23,7 @@ export const teamHierarchy: TeamMember = {
       role: "Principal",
       description: "College Principal",
       imageUrl: "/images/team/Ramamohan.jpeg",
-      linkedInUrl: "https://www.linkedin.com/in/principal-cvr",
+      linkedInUrl: "mailto:principal@cvr.ac.in",
     },
     {
       id: 2,
@@ -128,7 +128,7 @@ const teamMembers: TeamMember[] = [
     id: 13,
     name: "Erugurala Hanok",
     role: "Algo Designer",
-    description: "Designs algorithms and systems",
+    description: "Designs coding problems",
     imageUrl: "images/team/Hanok Erugurala.png",
     linkedInUrl: "https://www.linkedin.com/in/hanok-erugurala",
   },
@@ -385,44 +385,44 @@ if (teamHierarchy.children) {
 
 // Flat team list (keeping for backward compatibility)
 export const teamConfig: TeamMember[] = [
-  {
-    id: 1,
-    name: "Dr.K. Ramamohan Reddy",
-    role: "Principal",
-    description: "Principal",
-    imageUrl: "/images/team/Ramamohan.jpeg",
-    linkedInUrl: "https://www.linkedin.com/in/principal-cvr"
-  },
-  {
-    id: 2,
-    name: "Prof. L.C. Siva Reddy",
-    role: "Vice Principal",
-    description: "Vice Principal",
-    imageUrl: "/images/team/shiva-reddy.png",
-    linkedInUrl: "https://www.linkedin.com/in/viceprincipal-cvr"
-  },
-  {
-    id: 3,
-    name: "Dr.A. Vani Vathsala",
-    role: "CSE HOD",
-    description: "Head of Department - CSE",
-    imageUrl: "/images/team/vani-vathsala.png",
-    linkedInUrl: "https://www.linkedin.com/in/csehod-cvr"
-  },
-  {
-    id: 4,
-    name: "Y.V. Sridhar",
-    role: "Cybernauts Chair",
-    description: "Cybernauts Chairperson",
-    imageUrl: "/images/team/sridhar.png",
-    linkedInUrl: "https://www.linkedin.com/in/cybernautschair"
-  },
-  {
-    id: 5,
-    name: "Y. Samrath Reddy",
-    role: "Cybernauts VC",
-    description: "Cybernauts Vice Chairperson",
-    imageUrl: "/images/team/samrath.png",
-    linkedInUrl: "https://www.linkedin.com/in/samrathreddy"
-  },
-]; 
+    {
+      id: 1,
+      name: "Dr.K. Ramamohan Reddy",
+      role: "Principal",
+      description: "Principal",
+      imageUrl: "/images/team/Ramamohan.jpeg",
+      linkedInUrl: "mailto:principal@cvr.ac.in"
+    },
+    {
+      id: 2,
+      name: "Prof. L.C. Siva Reddy",
+      role: "Vice Principal",
+      description: "Vice Principal",
+      imageUrl: "/images/team/shiva-reddy.png",
+      linkedInUrl: "mailto:siva_reddy@cvr.ac.in"
+    },
+    {
+      id: 3,
+      name: "Dr.A. Vani Vathsala",
+      role: "CSE HOD",
+      description: "Head of Department - CSE",
+      imageUrl: "/images/team/vani-vathsala.png",
+      linkedInUrl: "https://www.linkedin.com/in/vani-vathsala-30a4641b"
+    },
+    {
+      id: 4,
+      name: "Y.V. Sridhar",
+      role: "Cybernauts Chair",
+      description: "Cybernauts Chairperson",
+      imageUrl: "/images/team/sridhar.png",
+      linkedInUrl: "https://www.linkedin.com/in/yalamanchili-venkata-sridhar-137674230"
+    },
+    {
+      id: 5,
+      name: "Y. Samrath Reddy",
+      role: "Cybernauts VC",
+      description: "Cybernauts Vice Chairperson",
+      imageUrl: "/images/team/samrath.png",
+      linkedInUrl: "https://www.linkedin.com/in/samrath-reddy"
+    },
+  ]; 
