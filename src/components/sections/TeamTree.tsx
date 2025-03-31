@@ -32,9 +32,9 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
     return (
       <Card key={member.id} className={`w-full h-100 sm:w-60 flex flex-col bg-gradient-to-b from-[rgba(21,31,45,1)] to-[rgba(1,1,1,1)] border-none shadow-md relative overflow-hidden ${member.id === 0 ? 'hidden' : ''}`}>
         <div className="h-40 sm:h-40 bg-gradient-to-r from-amber-500/30 to-amber-700/20 rounded-t-xl flex items-center justify-center overflow-hidden">
-          {member.imageUrl && isValidImageUrl(member.imageUrl) ? (
+        {member.imageUrl && member.imageUrl !== "/images/team/team-member.png" ? (
             <img 
-              src={member.imageUrl} 
+              src={member.imageUrl}  
               alt={`${member.name} - ${member.role}`}
               className="w-full h-full object-contain"
               onError={(e) => {

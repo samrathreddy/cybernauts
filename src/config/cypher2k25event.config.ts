@@ -87,7 +87,7 @@ export const cypher2k25EventsConfig: EventActivity[] = [
     id: "fandomquiz",
     title: "Fandom Quiz",
     description: "Showcase your knowledge in music, dance, and pop culture in the Fandom Quiz.",
-    category: "non-tech",
+    category: "tech",
     image: "/images/cypher-2k25/fandom quiz.png",
     prize: "₹1,500",
     registrationLink: "https://tally.so/r/3lzLvN"
@@ -96,7 +96,7 @@ export const cypher2k25EventsConfig: EventActivity[] = [
     id: "treasurehunt",
     title: "Treasure Hunt",
     description: "Join the Treasure Hunt to decipher clues and solve puzzles across campus",
-    category: "non-tech",
+    category: "tech",
     image: "/images/cypher-2k25/Treasure Hunt.png",
     prize: "₹3000",
     registrationLink: "https://tally.so/r/wMVL7k"
