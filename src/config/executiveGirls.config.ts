@@ -30,7 +30,7 @@ export const executiveGirlsTeamHierarchy: TeamMember = {
               name: "Ananya Pappula",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Ananya pappula.jpg",
               linkedInUrl: "https://www.linkedin.com/in/ananya-pappula-1735b9288",
             },
             {
@@ -38,7 +38,7 @@ export const executiveGirlsTeamHierarchy: TeamMember = {
               name: "P.Nandini Naidu",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Nandini.jpg",
               linkedInUrl: "https://www.linkedin.com/in/nandini-naidu-2536b1287",
             },
             {
@@ -46,7 +46,7 @@ export const executiveGirlsTeamHierarchy: TeamMember = {
               name: "Katakam Deekshitha",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Deekshitha Katakam.jpeg",
               linkedInUrl: "https://linkedin.com/in/k-deekshitha-133a1529b",
             },
             {
@@ -54,7 +54,7 @@ export const executiveGirlsTeamHierarchy: TeamMember = {
               name: "Amulya G",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/ - amulya gaje.jpg",
               linkedInUrl: "https://www.linkedin.com/in/amulya-gaje-52a338328",
             },
             {
@@ -62,8 +62,16 @@ export const executiveGirlsTeamHierarchy: TeamMember = {
               name: "L Harshitha",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Harshitha Reddy.jpg",
               linkedInUrl: "https://www.linkedin.com/in/harshitha-reddy-0119b0321",
+            },
+            {
+              id: 606,
+              name: "Sriramoju Nehasri",
+              role: "Executive Team Member",
+              description: "Executive Team",
+              imageUrl: "public/images/team/Nehasri Sriramoju.jpg",
+              linkedInUrl: "https://www.linkedin.com/in/nehasri-sri-ramoju-384377359",
             }
           ]
         },
@@ -77,22 +85,14 @@ export const executiveGirlsTeamHierarchy: TeamMember = {
           children: [
             {
               id: 701,
-              name: "Sriramoju Nehasri",
-              role: "Executive Team Member",
-              description: "Executive Team",
-              imageUrl: "..//team-member.png",
-              linkedInUrl: "https://www.linkedin.com/in/nehasri-sri-ramoju-384377359",
-            },
-            {
-              id: 702,
               name: "D.Harika",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Harika Donthula.jpg",
               linkedInUrl: "http://linkedin.com/in/harika-donthula",
             },
             {
-              id: 703,
+              id: 702,
               name: "S Hasini Reddy",
               role: "Executive Team Member",
               description: "Executive Team",
@@ -100,35 +100,35 @@ export const executiveGirlsTeamHierarchy: TeamMember = {
               linkedInUrl: "https://www.linkedin.com/company/cybernauts-cvr/",
             },
             {
-              id: 704,
+              id: 703,
               name: "P. Nikhitha",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Nikhitha Pendem.jpeg",
               linkedInUrl: "https://in.linkedin.com/in/nikhitha-pendem-478151322",
             },
             {
-              id: 705,
+              id: 704,
               name: "Kodimala Sarayu Reddy",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Sarayu Reddy Kodimala.jpg",
               linkedInUrl: "https://www.linkedin.com/in/sarayu-reddy-24079b2b6",
             },
             {
-              id: 706,
+              id: 705,
               name: "Karnati Sanjana",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Sanjana Karnati.jpg",
               linkedInUrl: "https://www.linkedin.com/company/cybernauts-cvr/",
             },
             {
-              id: 707,
+              id: 706,
               name: "Sykam Siri Chandana",
               role: "Executive Team Member",
               description: "Executive Team",
-              imageUrl: "..//team-member.png",
+              imageUrl: "public/images/team/Siri Chandana Sykam.jpg",
               linkedInUrl: "https://www.linkedin.com/in/siri-chandana-reddy-b41879291",
             }
           ]

@@ -30,13 +30,13 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
     };
     
     return (
-      <Card key={member.id} className={`w-full sm:w-60 flex flex-col bg-gradient-to-b from-[rgba(21,31,45,1)] to-[rgba(1,1,1,1)] border-none shadow-md relative overflow-hidden ${member.id === 0 ? 'hidden' : ''}`}>
-        <div className="h-32 sm:h-40 bg-gradient-to-r from-amber-500/30 to-amber-700/20 rounded-t-xl flex items-center justify-center overflow-hidden">
+      <Card key={member.id} className={`w-full h-100 sm:w-60 flex flex-col bg-gradient-to-b from-[rgba(21,31,45,1)] to-[rgba(1,1,1,1)] border-none shadow-md relative overflow-hidden ${member.id === 0 ? 'hidden' : ''}`}>
+        <div className="h-40 sm:h-40 bg-gradient-to-r from-amber-500/30 to-amber-700/20 rounded-t-xl flex items-center justify-center overflow-hidden">
           {member.imageUrl && isValidImageUrl(member.imageUrl) ? (
             <img 
               src={member.imageUrl} 
               alt={`${member.name} - ${member.role}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               onError={(e) => {
                 // If image fails to load, replace with default avatar
                 e.currentTarget.src = "/images/team/default-avatar.png";
@@ -93,7 +93,7 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
     return (
       <div className="flex flex-col">
         {/* Mobile: Stack vertically, Desktop: Show horizontally */}
-        <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start gap-6 sm:gap-8">
+        <div className="flex  flex-col sm:flex-row justify-center items-center sm:items-start gap-6 sm:gap-8">
           {topManagement.map((member, index) => (
             <div key={member.id} className="w-64 sm:w-auto">
               {/* Show mobile connector lines between stacked cards */}
@@ -137,7 +137,7 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
         {chair.children && chair.children.length > 0 && (
           <div className="flex justify-center mt-4 relative">
             {/* Main line */}
-            <div className="w-2 h-12 bg-amber-500 rounded-full"></div>
+            <div className="w-2 h-100 bg-amber-500 rounded-full"></div>
             
             {/* Glow effect */}
             <div className="absolute w-4 h-12 bg-amber-400/40 filter blur-sm rounded-full"></div>
@@ -204,7 +204,7 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
     const secondRow = teamMembers.slice(5, 10);
     
     return (
-      <div className="flex flex-col">
+      <div className="flex flex-col w-fit">
         {/* Team members section title */}
         <div className="text-amber-400 text-center mb-6 font-medium text-lg">Core Team Members</div>
         
