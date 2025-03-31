@@ -110,7 +110,7 @@ export const ExecutiveTree: React.FC<ExecutiveTreeProps> = ({
     const firstRowMembers = firstRowGroup.children;
     
     return (
-      <div className="flex flex-col items-center mb-10">
+      <div className="flex flex-col items-center mb-10 ">
         {/* Mobile: Stack vertically in 2 columns */}
         <div className="flex flex-wrap justify-center gap-4 sm:hidden">
           {firstRowMembers.map(member => (
@@ -156,7 +156,7 @@ export const ExecutiveTree: React.FC<ExecutiveTreeProps> = ({
         </div>
         
         {/* Desktop: Show in a single row with proper sizing */}
-        <div className="hidden sm:flex justify-center gap-4 max-w-6xl px-4">
+        <div className="hidden sm:flex justify-center gap-4 w-fit px-4">
           {secondRowMembers.map(member => (
             <div key={member.id} className="flex flex-col items-center">
               {renderTeamMemberCard(member)}
@@ -168,7 +168,7 @@ export const ExecutiveTree: React.FC<ExecutiveTreeProps> = ({
   };
 
   return (
-    <section className="w-full px-2 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-12 max-w-[1400px] mx-auto">
+    <section className="w-full px-2 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-12 mx-auto">
       <h2 className="text-white text-xl md:text-2xl lg:text-3xl font-semibold mb-4 text-center">
         {title}
       </h2>
@@ -176,7 +176,7 @@ export const ExecutiveTree: React.FC<ExecutiveTreeProps> = ({
       
       <div className="w-full flex flex-col items-center">
         {renderExecutiveLead()}
-        <div className="w-full max-w-6xl mx-auto">
+        <div className="w-full  mx-auto">
           {renderFirstRow()}
           {renderSecondRow()}
         </div>

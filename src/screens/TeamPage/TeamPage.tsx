@@ -13,8 +13,8 @@ import { siteConfig } from "../../config/home.config";
 
 export const TeamPage = (): JSX.Element => {
   return (
-    <div className="bg-white flex flex-row justify-center w-full">
-      <div className="bg-white w-full [background:radial-gradient(50%_50%_at_50%_0%,rgba(104,82,66,1)_0%,rgba(23,35,51,1)_35%,rgba(0,0,0,1)_73%)] min-h-screen relative">
+    <div className="bg-white flex flex-row justify-center w-fit overflow-x-scroll">
+      <div className="bg-white w-fit [background:radial-gradient(50%_50%_at_50%_0%,rgba(104,82,66,1)_0%,rgba(23,35,51,1)_35%,rgba(0,0,0,1)_73%)] min-h-screen relative">
         {/* Header Component */}
         <Header 
           navigation={navigationConfig}
