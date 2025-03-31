@@ -8,4 +8,5 @@ export const navigationConfig: NavigationItem[] = [
   { label: "Cypher 2K25", href: "/cypher" },
   { label: "Events", href: "/events" },
   { label: "Team", href: "/team" },
+  { label: "Buy Passes", href: "/passes" },
 ]; 

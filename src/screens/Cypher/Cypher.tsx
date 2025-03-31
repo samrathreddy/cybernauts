@@ -6,8 +6,8 @@ import { Footer } from "../../components/layout/Footer";
 import { siteConfig } from "../../config/home.config";
 import { navigationConfig } from "../../config/navigation.config";
 import { motion } from "framer-motion";
-import { renderCanvas } from "../../components/ui/canvas";
 import { Button } from "../../components/ui/button";
+import { RegistrationForm } from "../../components/sections/FormModal";
 import {
   Accordion,
   AccordionContent,
@@ -35,69 +35,133 @@ interface FAQ {
 // Event activities data
 const eventActivities: EventActivity[] = [
   {
+      id: "frontendblitz",
+      title: "Frontend Blitz",
+      description: "Participate in Frontend Blitz to build innovative UI solutions in teams of 2-4 members.",
+      category: "tech",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
+      prize: "₹1,500"
+  },
+  {
+      id: "promptcraft",
+      title: "Prompt Craft",
+      description: "Participate in Prompt Craft to test your cybersecurity skills and creative problem solving.",
+      category: "tech",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
+      prize: "₹1,500"
+  },
+  {
+      id: "code&chaos2.0",
+      title: "Code & Chaos 2.0",
+      description: "Engage in Code & Chaos 2.0 to solve algorithmic challenges under pressure.",
+      category: "tech",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
+      prize: "₹3,000"
+  },
+  {
     id: "hackathon",
-    title: "36-Hour Hackathon",
-    description: "Build innovative solutions to real-world problems in teams of 2-4 members.",
+    title: "Hackathon",
+    description: "Join the Hackathon to collaborate and innovate on real-world problems.",
     category: "tech",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
-    prize: "₹50,000"
-  },
-  {
-    id: "ctf",
-    title: "Capture The Flag",
-    description: "Test your cybersecurity skills in this exciting challenge to find vulnerabilities.",
-    category: "tech",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
-    prize: "₹30,000"
-  },
-  {
-    id: "coding",
-    title: "Competitive Coding",
-    description: "Solve complex algorithmic problems in the shortest time possible.",
-    category: "tech",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
-    prize: "₹25,000"
-  },
-  {
-    id: "gamedev",
-    title: "Game Development",
-    description: "Design and build a game based on the surprise theme.",
-    category: "tech",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
-    prize: "₹35,000"
-  },
-  {
-    id: "treasure",
-    title: "Tech Treasure Hunt",
-    description: "Find clues and solve technical puzzles in this exciting campus-wide game.",
-    category: "non-tech",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
-    prize: "₹15,000"
-  },
-  {
-    id: "gaming",
-    title: "eSports Tournament",
-    description: "Compete in popular games like Valorant, CS:GO, and FIFA.",
-    category: "non-tech",
-    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
-    prize: "₹20,000"
-  },
-  {
-    id: "debate",
-    title: "Tech Debate",
-    description: "Debate on cutting-edge technology topics and their impact on society.",
-    category: "non-tech",
     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
     prize: "₹10,000"
   },
   {
-    id: "cultural",
-    title: "Cultural Night",
-    description: "Showcase your talent in music, dance, and other performing arts.",
+      id: "gamedevbattle",
+      title: "Game Dev Battle",
+      description: "Join Game Dev Battle to design and develop a game based on a surprise theme.",
+      category: "tech",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
+      prize: "₹5,000"
+  },
+  {
+      id: "paperpresentation",
+      title: "Paper Presentation",
+      description: "Take part in Paper Presentation and showcase your research and technical expertise.",
+      category: "tech",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
+      prize: "₹3,000"
+  },
+  {
+    id: "posterpresentation",
+    title: "posterpresentation",
+    description: "Participate in Poster Presentation to visually communicate your ideas and research.",
     category: "non-tech",
     image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
-    prize: "₹20,000"
-  }
+    prize: "₹3,500"
+},
+  {
+      id: "blindtyping",
+      title: "Blind Typing",
+      description: "Prove your speed and accuracy in Blind Typing challenges.",
+      category: "non-tech",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
+      prize: "₹1,500"
+  },
+  {
+      id: "fandomquiz",
+      title: "Fandom Quiz",
+      description: "Showcase your knowledge in music, dance, and pop culture in the Fandom Quiz.",
+      category: "non-tech",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
+      prize: "₹1,500"
+  },
+  {
+      id: "treasurehunt",
+      title: "Treasure Hunt",
+      description: "Join the Treasure Hunt to decipher clues and solve puzzles across campus",
+      category: "tech",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
+      prize: "₹3000"
+  },
+  {
+      id: "openmic",
+      title: "Open Mic",
+      description: "Express yourself at Open Mic where creativity meets performance.",
+      category: "non-tech",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
+      prize: "NA"
+  },
+  {
+      id: "tugofwar",
+      title: "Tug Of War",
+      description: "Team up and test your strength in the competitive Tug Of War.",
+      category: "non-tech",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
+      prize: "NA"
+  },
+  {
+      id: "gamearcade",
+      title: "Game Arcade",
+      description: "Dive into the Game Arcade for a variety of fun and challenging games.",
+      category: "non-tech",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
+      prize: "NA"
+  },
+  {
+      id: "memecontest",
+      title: "Meme Contest",
+      description: "Unleash your humor and wit at the Meme Contest.",
+      category: "non-tech",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
+      prize: "NA"
+  },
+  {
+      id: "dedicateasong",
+      title: "Dedicate a Song",
+      description: "Dedicate a song and share your heartfelt message through music.",
+      category: "non-tech",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
+      prize: "NA"
+  },
+  {
+      id: "iplauction",
+      title: "IPL Auction",
+      description: "Experience the thrill of bidding in the IPL Auction simulation.",
+      category: "non-tech",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23f59e0b'/%3E%3C/svg%3E",
+      prize: "NA"
+  },
 ];
 
 // FAQs data
@@ -147,6 +211,7 @@ const faqs: FAQ[] = [
 export const Cypher = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [filteredActivities, setFilteredActivities] = useState(eventActivities);
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
   
   // Filter events by category
   useEffect(() => {
@@ -159,18 +224,9 @@ export const Cypher = (): JSX.Element => {
     }
   }, [selectedCategory]);
   
-  // Initialize canvas animation
-  useEffect(() => {
-    renderCanvas();
-  }, []);
 
   return (
     <div className="bg-white w-full [background:radial-gradient(50%_50%_at_50%_0%,rgba(104,82,66,1)_0%,rgba(23,35,51,1)_35%,rgba(0,0,0,1)_73%)] min-h-screen relative overflow-hidden">
-      {/* Canvas for cursor animation effect */}
-      <canvas
-        className="pointer-events-none fixed inset-0 w-full h-full z-[5]"
-        id="canvas"
-      />
       
       {/* Header */}
       <Header 
@@ -309,18 +365,7 @@ export const Cypher = (): JSX.Element => {
             </div>
           </div>
           
-          <div className="md:w-1/2 relative">
-            <div className="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-amber-500 to-amber-800">
-              {/* Placeholder for the about image */}
-              <div className="w-full h-full flex items-center justify-center">
-                <span className="text-black text-xl font-bold">Cypher 2K25</span>
-              </div>
-            </div>
-            <div className="absolute -bottom-8 -right-8 bg-amber-500 p-6 rounded-lg">
-              <p className="text-black font-bold text-xl">Early Bird Registrations Open!</p>
-              <p className="text-black/80 text-sm mt-1">Limited spots available</p>
-            </div>
-          </div>
+          
         </div>
       </section>
       
@@ -396,13 +441,14 @@ export const Cypher = (): JSX.Element => {
                   </p>
                   <div className="mt-4 flex items-center justify-between">
                     <span className="text-amber-500 font-bold">
-                      Prize: {activity.prize}
+                      Prize Pool: {activity.prize}
                     </span>
                     <Button 
                       variant="outline" 
                       className="text-xs border-white/20 hover:bg-white/10 hover:border-amber-500/50"
+                      onClick={() => setIsRegistrationOpen(true)}
                     >
-                      Details
+                      Register
                     </Button>
                   </div>
                 </div>
@@ -422,30 +468,38 @@ export const Cypher = (): JSX.Element => {
               </h2>
               <p className="text-white/80 mb-6">
                 Registration is open for individual events and complete packages. Pre-register now to secure your spot 
-                and get exclusive early bird discounts! On-spot registrations will also be available, subject to availability.
+                and get exclusive early bird discounts! On-spot registrations will also be available, subject to availability. 
+                Purchase passes to bypass the hassle of payment and enjoy the seamless experience of Cypher 2K25.
               </p>
-              <ul className="text-white/70 space-y-2 mb-6">
+              <ul className="text-white/70 space-y-2 mb-6">                
                 <li className="flex items-center">
                   <svg className="h-5 w-5 text-amber-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  Early Bird (Until March 1): <span className="text-amber-400 font-medium ml-1">₹400 per person</span>
+                  Solo Pass: <span className="text-amber-400 font-medium ml-1">₹400 per person</span>
                 </li>
                 <li className="flex items-center">
                   <svg className="h-5 w-5 text-amber-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  Regular Registration: <span className="text-amber-400 font-medium ml-1">₹500 per person</span>
+                  Duo Pass: <span className="text-amber-400 font-medium ml-1">₹750 per person</span>
                 </li>
                 <li className="flex items-center">
                   <svg className="h-5 w-5 text-amber-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  On-Spot Registration: <span className="text-amber-400 font-medium ml-1">₹600 per person</span>
+                  Trio Pass: <span className="text-amber-400 font-medium ml-1">₹1125 per person</span>
+                </li>
+                <li className="flex items-center">
+                  <svg className="h-5 w-5 text-amber-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Quadro Pass: <span className="text-amber-400 font-medium ml-1">₹1525 per person</span>
                 </li>
               </ul>
               <div className="mt-4">
-                <Button className="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-black font-bold text-lg rounded-full">
+                <Button className="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-black font-bold text-lg rounded-full"
+                onClick={() => setIsRegistrationOpen(true)}>
                   Register Now
                 </Button>
               </div>
@@ -458,12 +512,6 @@ export const Cypher = (): JSX.Element => {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                   <span className="text-white/80">Access to all events</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-amber-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-white/80">Lunch</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="h-5 w-5 text-amber-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -489,6 +537,10 @@ export const Cypher = (): JSX.Element => {
         </div>
       </section>
       
+      {isRegistrationOpen && (
+        <RegistrationForm onClose={() => setIsRegistrationOpen(false)} onSubmit={()=>{}}/>
+      )}
+
       {/* FAQs Section */}
       <section className="relative py-20 bg-black/30 z-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -550,4 +602,4 @@ export const Cypher = (): JSX.Element => {
       <Footer siteConfig={siteConfig} />
     </div>
   );
-}; 
+};

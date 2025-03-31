@@ -5,13 +5,14 @@ import { SiteConfig } from "../../config/home.config";
 import { SplineSceneCanvas } from "../ui/spline-scene-canvas";
 import { Sponsor } from "../../config/sponsors.config";
 import { renderCanvas } from "../ui/canvas";
+import { Columns } from "lucide-react";
 
 interface HeroSectionProps {
   siteConfig: SiteConfig;
   sponsors?: Sponsor[];
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ siteConfig, sponsors = [] }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ siteConfig, sponsors = []}) => {
   // Countdown timer state and logic
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -19,7 +20,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ siteConfig, sponsors =
     minutes: 0,
     seconds: 0
   });
-
+  
   useEffect(() => {
     // Initialize the canvas animation when the component mounts
     renderCanvas();
@@ -48,7 +49,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ siteConfig, sponsors =
   return (
     <section className="w-full px-4 sm:px-6 lg:px-8 pb-10 pt-16 md:pt-20 relative">
       {/* Canvas for cursor animation - added at the section level */}
-      <canvas
+     <canvas
         className="pointer-events-none absolute inset-0 w-full h-full z-10"
         id="canvas"
       />

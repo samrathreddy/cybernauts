@@ -9,29 +9,29 @@ import { eventsConfig, EventItem } from "../../config/events.config";
 import { motion } from "framer-motion";
 
 
-export const Events = (): JSX.Element => {
+export const Passes = (): JSX.Element => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [filteredEvents, setFilteredEvents] = useState(eventsConfig);
   const [selectedEvent, setSelectedEvent] = useState<EventItem | null>(null);
   const [eventLoaded, setEventLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   
-  // Main filter categories
-  const mainCategories = ["hackathon", "workshop", "coding", "tech", "non-tech", "fdp", "social"];
-  
+  // Main filter categories 
   // Filter events by tag
-  useEffect(() => {
-    if (selectedTag) {
-      // For main categories, we need to check if the event has any tag that includes the selected category
-      setFilteredEvents(eventsConfig.filter(event => 
-        event.tags.some(tag => tag.toLowerCase().includes(selectedTag.toLowerCase()))
-      ));
-    } else {
-      setFilteredEvents(eventsConfig);
-    }
-  }, [selectedTag]);
   
-  // Initialize canvas animation
+  
+  // State to manage the visibility of the registration form modal
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
+
+  // Function to handle form submission
+  const handleRegistrationSubmit = (data:any) => {
+      console.log("Registration data submitted:", data);
+      // Here you would typically handle the submission of the form data,
+      // such as sending it to a server.
+      setShowRegistrationForm(false);
+  };
+  
+
   useEffect(() => {
     setEventLoaded(true);
   }, []);
@@ -45,7 +45,7 @@ export const Events = (): JSX.Element => {
         siteConfig={siteConfig}
       />
       
-      {/* Hero Section with elegant design */}
+      {/* Hero Section with captivating pass copy */}
       <section className="relative w-full h-[60vh] overflow-hidden">
         <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-black z-10"></div>
         <div className="absolute inset-0 w-full h-full bg-black/50 z-[1]"></div>
@@ -77,7 +77,7 @@ export const Events = (): JSX.Element => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Our Events
+            Unlock Exclusive Passes
           </motion.h1>
           
           <motion.div
@@ -93,45 +93,13 @@ export const Events = (): JSX.Element => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Explore our past tech events, hackathons, and workshops that have inspired innovation and creativity.
+            Experience the thrill and innovation of Cypher 2K25.
+            Buy your exclusive pass now to secure access to cutting-edge events, workshops and hackathons.
           </motion.p>
         </div>
       </section>
       
-      {/* Simplified Filter tags */}
-      <section className="relative py-10 container mx-auto px-4 sm:px-6 lg:px-8 z-20">
-        <motion.div 
-          className="flex flex-wrap gap-2 justify-center" 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-        >
-          <button
-            className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-              selectedTag === null 
-                ? 'bg-amber-500 text-black' 
-                : 'bg-gray-800/70 text-amber-300 hover:bg-amber-500/20'
-            }`}
-            onClick={() => setSelectedTag(null)}
-          >
-            All Events
-          </button>
-          
-          {mainCategories.map(category => (
-            <button
-              key={category}
-              className={`px-4 py-2 rounded-md text-sm font-medium capitalize transition-all duration-300 ${
-                selectedTag === category 
-                  ? 'bg-amber-500 text-black' 
-                  : 'bg-gray-800/70 text-amber-300 hover:bg-amber-500/20'
-              }`}
-              onClick={() => setSelectedTag(category)}
-            >
-              {category === "fdp" ? "FDP" : category}
-            </button>
-          ))}
-        </motion.div>
-      </section>
+      
       
       {/* Main events grid */}
       <section 
@@ -206,7 +174,7 @@ export const Events = (): JSX.Element => {
                   ))}
                 </div>
                 
-                {/* Elegant button */}
+                {/* Call-to-action button */}
                 <button className="mt-4 py-2 px-4 bg-transparent border border-amber-500/30 text-amber-400 hover:bg-amber-500/10 hover:border-amber-500 transition-all duration-300 text-sm rounded-md w-full">
                   View Details
                 </button>
@@ -313,8 +281,16 @@ export const Events = (): JSX.Element => {
           </motion.div>
         </motion.div>
       )}
-      
+
+      {/* Button to open the registration form */}
+      <button
+          className="fixed bottom-6 right-6 bg-amber-500 hover:bg-amber-600 text-black rounded-full p-4 shadow-lg z-50"
+          onClick={() => setShowRegistrationForm(true)}
+      >
+          Buy Your Pass Now
+      </button>
+
       <Footer siteConfig={siteConfig} />
     </div>
   );
-}; 
+};
