@@ -82,10 +82,6 @@ export const eventsConfig: EventItem[] = [
     date: "Febuary 5, 2025",
     location: "CVR College of Engineering, Hyderabad",
     imageUrl: "/images/events/Cyber_Hygiene/tech1.jpg",
-    galleryImages: [
-      "/images/events/Cyber_Hygiene/tech2.jpg",
-      "/images/events/Cyber_Hygiene/tech3.jpg"
-    ],
     tags: ["tech"],
   }
 ]; 
