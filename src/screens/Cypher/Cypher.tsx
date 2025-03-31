@@ -8,6 +8,7 @@ import { navigationConfig } from "../../config/navigation.config";
 import { motion } from "framer-motion";
 import { Button } from "../../components/ui/button";
 import { RegistrationForm } from "../../components/sections/FormModal";
+import AnimatedNumbers from "react-animated-numbers"
 import {
   Accordion,
   AccordionContent,
@@ -248,7 +249,7 @@ export const Cypher = (): JSX.Element => {
         />
         
         {/* Hero content */}
-        <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+        <div className="relative z-20 w-fit container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -308,12 +309,37 @@ export const Cypher = (): JSX.Element => {
             className="mt-16 flex gap-6 items-center justify-center text-white/50"
           >
             <div className="flex flex-col items-center">
-              <span className="text-4xl font-bold text-amber-500">500+</span>
+              <span className="text-4xl font-bold text-amber-500 flex">
+              <AnimatedNumbers
+                    includeComma
+                    transitions={(index) => ({
+                      type: "spring",
+                      duration: index + 1,
+                    })}
+                    animateToNumber={500}
+                    fontStyle={{
+                      fontSize: 40,
+                      color: "amber-500"
+                    }}
+                  />+
+              </span>
               <span className="text-sm mt-1">Participants</span>
             </div>
             <div className="h-12 w-px bg-white/20"></div>
             <div className="flex flex-col items-center">
-              <span className="text-4xl font-bold text-amber-500">20+</span>
+              <span className="text-4xl font-bold text-amber-500 list flex">
+                <AnimatedNumbers
+                    includeComma
+                    transitions={(index) => ({
+                      type: "spring",
+                      duration: index + 1,
+                    })}
+                    animateToNumber={20}
+                    fontStyle={{
+                      fontSize: 40,
+                      color: "amber-500"
+                    }}
+                  />+</span>
               <span className="text-sm mt-1">Events</span>
             </div>
             <div className="h-12 w-px bg-white/20"></div>
