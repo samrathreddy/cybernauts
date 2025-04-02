@@ -157,6 +157,13 @@ export const RegistrationForm = ({
                                     <option value="trio">Trio Pass - ₹{passPrices.trio}</option>
                                     <option value="quadro">Quadro Pass - ₹{passPrices.quadro}</option>
                                 </select>
+                                
+                                <div className="mt-4 p-3 bg-gray-800/80 border border-amber-500/20 rounded-lg">
+                                    <p className="text-white/60 text-xs">
+                                        Note: If you prefer to register for individual events instead of purchasing a pass, 
+                                        please return to the main page and select the Pay-Per-Event registration option.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     )}

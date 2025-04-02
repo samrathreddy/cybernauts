@@ -176,7 +176,7 @@ export const cypher2k25FAQsConfig: FAQ[] = [
   },
   {
     question: "What is the registration fee?",
-    answer: "It varies based on the type of pass membership, and even pay per event basis."
+    answer: "We offer two registration options: 1) Pass-based registration with different pricing tiers (Solo: ₹410, Duo: ₹775, Trio: ₹1165, Quadro: ₹1550), and 2) Pay-per-event registration where you pay individually for each event you want to attend based on its specific registration fee."
   },
   {
     question: "Is this fest open to students from other colleges?",

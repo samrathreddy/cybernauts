@@ -443,6 +443,35 @@ export const Cypher = (): JSX.Element => {
                 </li>
               </ul>
               
+              {/* Pay Per Event Section */}
+              <div className="mt-6 mb-6 p-5 bg-gradient-to-r from-indigo-900/40 to-black/60 rounded-lg border border-indigo-500/40">
+                <h3 className="text-indigo-300 font-bold text-xl mb-3 flex items-center">
+                  <svg className="h-6 w-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                  </svg>
+                  Pay Per Event Registration
+                </h3>
+                <div className="bg-indigo-900/20 p-3 rounded-lg mb-3">
+                  <p className="text-white/90 text-base">
+                    Don't want to purchase a pass? You can register for <span className="text-indigo-300 font-medium">individual events</span> by paying the registration fee for each specific event you want to attend.
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div className="flex items-start bg-indigo-900/10 p-2 rounded">
+                    <svg className="h-5 w-5 text-indigo-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-white/80 text-sm">Choose only the events you're interested in</span>
+                  </div>
+                  <div className="flex items-start bg-indigo-900/10 p-2 rounded">
+                    <svg className="h-5 w-5 text-indigo-400 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-white/80 text-sm">Pay only for what you attend</span>
+                  </div>
+                </div>
+              </div>
+              
               {/* Referral Program Section */}
               <div className="mt-6 p-5 bg-gradient-to-r from-purple-900/30 to-black/60 rounded-lg border border-purple-500/30">
                 <h3 className="text-purple-300 font-bold text-lg mb-3 flex items-center">
