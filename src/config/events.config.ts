@@ -18,7 +18,7 @@ export const eventsConfig: EventItem[] = [
     title: "Cypher 2025",
     description: "Our annual flagship event with participation from other colleges.",
     longDescription: "CVR's flagship tech extravaganza featuring hackathons, coding competitions, workshops, and cultural events. Join us for an unforgettable experience of innovation, learning, and fun!.",
-    date: "April 3, 2025",
+    date: "April 4, 2025",
     location: "CVR College of Engineering, Hyderabad",
     imageUrl: "/images/events/cypher-2025/poster.png",
     tags: ["hackathon", "coding", "upcoming", "non-tech"],

@@ -14,8 +14,8 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   title: "Cypher 2K25 - Cybernauts Club",
   description: "CVR's largest tech fest in 2025",
-  eventDate: "2025-04-03",
-  eventDateDisplay: "03rd April, 2025",
+  eventDate: "2025-04-04",
+  eventDateDisplay: "04th April, 2025",
   eventTitle: "Cypher 2K25",
   eventDescription: "Join Cypher ultimate fest of CVR, fun is guaranteed. (Yes, you've read that right.)",
   ctaText: "Enroll now",

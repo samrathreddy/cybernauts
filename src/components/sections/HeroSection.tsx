@@ -27,7 +27,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ siteConfig, sponsors =
     renderCanvas();
 
     // Set your event date here
-    const eventDate = new Date("2025-04-03T00:00:00"); // Example date, adjust as needed
+    const eventDate = new Date("2025-04-04T00:00:00"); // Example date, adjust as needed
     
     const calculateTimeLeft = () => {
       const difference = +eventDate - +new Date();
