@@ -103,38 +103,38 @@ export const Cypher = (): JSX.Element => {
   }, []);
   
   // Countdown timer effect
-  useEffect(() => {
-    // Set target date to April 3, 2025, 7:00 PM IST
-    const targetDate = new Date('2025-04-03T19:00:00+05:30');
+  // useEffect(() => {
+  //   // Set target date to April 4, 2025, 12:00 PM IST
+  //   const targetDate = new Date('2025-04-04T12:00:00+05:30');
     
-    const updateCountdown = () => {
-      const now = new Date();
-      const difference = targetDate.getTime() - now.getTime();
+  //   const updateCountdown = () => {
+  //     const now = new Date();
+  //     const difference = targetDate.getTime() - now.getTime();
       
-      if (difference <= 0) {
-        // If past the date, set all to 0
-        setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        clearInterval(interval);
-        return;
-      }
+  //     if (difference <= 0) {
+  //       // If past the date, set all to 0
+  //       setTimeRemaining({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  //       clearInterval(interval);
+  //       return;
+  //     }
       
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+  //     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  //     const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  //     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
       
-      setTimeRemaining({ days, hours, minutes, seconds });
-    };
+  //     setTimeRemaining({ days, hours, minutes, seconds });
+  //   };
     
-    // Initial update
-    updateCountdown();
+  //   // Initial update
+  //   updateCountdown();
     
-    // Update every second
-    const interval = setInterval(updateCountdown, 1000);
+  //   // Update every second
+  //   const interval = setInterval(updateCountdown, 1000);
     
-    // Cleanup
-    return () => clearInterval(interval);
-  }, []);
+  //   // Cleanup
+  //   return () => clearInterval(interval);
+  // }, []);
   
   // Filter events by category
   useEffect(() => {
@@ -275,29 +275,7 @@ export const Cypher = (): JSX.Element => {
               <svg className="h-5 w-5 text-red-500 mr-2 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.415L11 9.586V6z" clipRule="evenodd" />
               </svg>
-              <p className="text-red-400 font-bold text-lg">REGISTRATION CLOSES SOON!</p>
-            </div>
-            <p className="text-white/80 text-sm text-center mb-2">Don't miss out! Register before <span className="text-red-400 font-semibold">April 3, 2025, 7PM IST</span></p>
-            <div className="flex justify-center items-center gap-4 text-white">
-              <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold text-red-500">{timeRemaining.days}</span>
-                <span className="text-xs text-red-400/80">DAYS</span>
-              </div>
-              <span className="text-xl text-red-500 mb-3">:</span>
-              <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold text-red-500">{timeRemaining.hours}</span>
-                <span className="text-xs text-red-400/80">HOURS</span>
-              </div>
-              <span className="text-xl text-red-500 mb-3">:</span>
-              <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold text-red-500">{timeRemaining.minutes}</span>
-                <span className="text-xs text-red-400/80">MINS</span>
-              </div>
-              <span className="text-xl text-red-500 mb-3">:</span>
-              <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold text-red-500">{timeRemaining.seconds}</span>
-                <span className="text-xs text-red-400/80">SECS</span>
-              </div>
+              <p className="text-red-400 font-bold text-lg">EVENT ENDED!</p>
             </div>
           </motion.div>
           
@@ -509,7 +487,7 @@ export const Cypher = (): JSX.Element => {
                   Register Now
                 </Button>
                 <p className="text-white/50 mt-3 text-sm">
-                  Registration closes: April 3, 2025, 7PM IST
+                  Registration closes: April 4, 2025, 12PM IST
                 </p>
               </div>
             </div>
@@ -850,7 +828,7 @@ export const Cypher = (): JSX.Element => {
               Register Now
             </Button>
             <p className="text-white/50 mt-6">
-              Limited spots available. Last date for registration: April 3, 2025, 7PM IST.
+              Limited spots available. Last date for registration: April 4, 2025, 12PM IST.
             </p>
           </div>
         </div>
