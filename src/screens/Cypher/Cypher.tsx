@@ -151,8 +151,8 @@ export const Cypher = (): JSX.Element => {
   const handleEventRegistration = (eventId: string, eventTitle: string) => {
     // For the general event or any button in the main page that should go to the Tally form
     if (eventId === "general") {
-      // Directly redirect to the Tally.so form
-      window.open("https://tally.so/r/npzkJ8", '_blank');
+      // Redirect to our custom registration page instead of directly to Tally
+      window.location.href = "/event/register";
       return;
     }
     

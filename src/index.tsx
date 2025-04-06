@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./screens/Home/Home";
 import { TeamPage } from "./screens/TeamPage/TeamPage";
 import { Events } from "./screens/Events/Events";
+import { Register } from "./screens/Events/Register";
 import { Cypher } from "./screens/Cypher";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
@@ -14,6 +15,7 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         <Route path="/team" element={<TeamPage />} />
         <Route path="/events" element={<Events />} />
         <Route path="/cypher" element={<Cypher />} />
+        <Route path="/event/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
