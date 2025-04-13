@@ -36,7 +36,7 @@ export const ExecutiveTree: React.FC<ExecutiveTreeProps> = ({
             <img 
               src={member.imageUrl} 
               alt={`${member.name} - ${member.role}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               onError={(e) => {
                 // If no default avatar exists, show role as text fallback
                 e.currentTarget.onerror = () => {

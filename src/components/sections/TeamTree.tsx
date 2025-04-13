@@ -18,17 +18,6 @@ export const TeamTree: React.FC<TeamTreeProps> = ({
       return null;
     }
     
-    // Helper to check if image URL is valid and accessible
-    const isValidImageUrl = (url: string): boolean => {
-      // Check if path is relative and incorrect (starting with ../)
-      if (url.startsWith('../')) return false;
-      
-      // Check if path is empty
-      if (!url.trim()) return false;
-      
-      return true;
-    };
-    
     return (
       <Card key={member.id} className={`w-full h-100 sm:w-60 flex flex-col bg-gradient-to-b from-[rgba(21,31,45,1)] to-[rgba(1,1,1,1)] border-none shadow-md relative overflow-hidden ${member.id === 0 ? 'hidden' : ''}`}>
         <div className="h-40 sm:h-40 bg-gradient-to-r from-amber-500/30 to-amber-700/20 rounded-t-xl flex items-center justify-center overflow-hidden">
