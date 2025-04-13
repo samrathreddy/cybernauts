@@ -25,6 +25,7 @@
     "react-animated-numbers": "^1.0.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.30.0",
+    "react-toastify": "^11.0.5",
     "tailwind-merge": "2.5.4"
   },
   "devDependencies": {

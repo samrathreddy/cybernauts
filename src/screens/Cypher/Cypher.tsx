@@ -15,6 +15,7 @@ import {
   AccordionTrigger,
 } from "../../components/ui/accordion";
 import { Badge } from "../../components/ui/badge";
+import { toast } from "react-toastify";
 
 export const Cypher = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -147,32 +148,44 @@ export const Cypher = (): JSX.Element => {
     }
   }, [selectedCategory]);
   
-  // Function to handle event registration
+  // Function to handle event registration after event has ended.
   const handleEventRegistration = (eventId: string, eventTitle: string) => {
-    // For the general event or any button in the main page that should go to the Tally form
-    if (eventId === "general") {
-      // Directly redirect to the Tally.so form
-      window.open("https://tally.so/r/npzkJ8", '_blank');
-      return;
-    }
+    console.log("Event pressed")
+    // Display toast message for ended event with black background and amber text
+    toast.info("This event has ended", {
+        style: {
+            backgroundColor: "#000000", // Black
+            color: "#FFC107",           // Amber Yellow
+        },
+        autoClose: 3000,
+    });
+};
+ // to handle event registration
+  // const handleEventRegistration = (eventId: string, eventTitle: string) => {
+  //   // For the general event or any button in the main page that should go to the Tally form
+  //   if (eventId === "general") {
+  //     // Directly redirect to the Tally.so form
+  //     window.open("https://tally.so/r/npzkJ8", '_blank');
+  //     return;
+  //   }
     
-    // For other events, keep the existing logic
-    const link = getEventRegistrationLink(eventId);
-    setCurrentEventId(eventId);
-    setCurrentEventTitle(eventTitle);
-    setRegistrationLink(link);
+  //   // For other events, keep the existing logic
+  //   const link = getEventRegistrationLink(eventId);
+  //   setCurrentEventId(eventId);
+  //   setCurrentEventTitle(eventTitle);
+  //   setRegistrationLink(link);
     
-    if (link === "free") {
-      // Show modal for free events
-      setIsRegistrationOpen(true);
-    } else if (link) {
-      // Open the registration link in a new tab
-      window.open(link, '_blank');
-    } else {
-      // Open the modal to show the "On Spot Registrations / Pass registrations only" message
-      setIsRegistrationOpen(true);
-    }
-  };
+  //   if (link === "free") {
+  //     // Show modal for free events
+  //     setIsRegistrationOpen(true);
+  //   } else if (link) {
+  //     // Open the registration link in a new tab
+  //     window.open(link, '_blank');
+  //   } else {
+  //     // Open the modal to show the "On Spot Registrations / Pass registrations only" message
+  //     setIsRegistrationOpen(true);
+  //   }
+  // };
 
   return (
     <div className="bg-white w-full [background:radial-gradient(50%_50%_at_50%_0%,rgba(104,82,66,1)_0%,rgba(23,35,51,1)_35%,rgba(0,0,0,1)_73%)] min-h-screen relative overflow-hidden">
