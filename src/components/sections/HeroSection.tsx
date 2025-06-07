@@ -55,9 +55,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ siteConfig, sponsors =
         id="canvas"
       />
       
-      <div className="flex flex-col lg:flex-row items-start gap-8 justify-between">
+      <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 lg:gap-8 justify-between">
         {/* Content Column - Restored to original vertical positioning */}
-        <div className="flex flex-col items-start gap-6 md:gap-8 pt-12 md:pt-32 lg:pt-[200px] max-w-[500px]">
+        <div className="flex flex-col items-start gap-6 md:gap-8 pt-12 md:pt-32 lg:pt-[200px] max-w-full sm:max-w-[400px] lg:max-w-[500px] flex-shrink-0">
           {/* Date Badge with Golden Fluid Border Flow */}
           <div className="relative inline-flex group">
             {/* Animation container */}
@@ -174,8 +174,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ siteConfig, sponsors =
           )} */}
         </div>
 
-        {/* SplineSceneCanvas with cursor effect - Positioned higher up beside the content */}
-        <div className="flex-1 relative h-[500px] lg:h-[700px] w-full max-w-full lg:max-w-[60%] mt-0 lg:mt-24">
+        {/* SplineSceneCanvas with cursor effect - Bottom on mobile/portrait, right on landscape+ */}
+        <div className="flex-1 relative h-[400px] sm:h-[500px] lg:h-[700px] w-full sm:max-w-[55%] lg:max-w-[60%] mt-6 sm:mt-0 lg:mt-24">
           <SplineSceneCanvas 
             scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
             className="w-full h-full"
